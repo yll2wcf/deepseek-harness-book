@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="510" viewBox="0 0 1200 510" role="img" aria-labelledby="title desc">
+  <title id="title">从源码读懂 Agent，中文开源书</title>
+  <desc id="desc">DeepSeek Harness 架构分析与实战，14章、10张教学图，PDF与EPUB免费下载，于连林著。</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0c172c"/><stop offset="1" stop-color="#24346b"/></linearGradient></defs>
+  <style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif}</style>
+  <rect width="1200" height="510" fill="url(#bg)"/>
+  <circle cx="1150" cy="30" r="320" fill="#6671ed" opacity=".15"/>
+  <text x="66" y="78" font-size="23" fill="#a9bcef">一本中文开源书 · 2026.11</text>
+  <text x="62" y="193" font-size="67" font-weight="700" fill="white">从源码读懂 <tspan fill="#8da9ff">Agent</tspan></text>
+  <rect x="66" y="221" width="120" height="6" rx="3" fill="#6d9cff"/>
+  <text x="65" y="287" font-size="31" fill="#e3eaff">DeepSeek Harness 架构分析与实战</text>
+  <text x="66" y="344" font-size="23" fill="#bdc9e2">沿一条用户任务，读到工具、权限、取消与恢复</text>
+  <rect x="66" y="391" width="390" height="52" rx="12" fill="#294989" stroke="#7599ef"/>
+  <text x="261" y="425" text-anchor="middle" font-size="22" fill="white">14章 · 10张教学图 · PDF / EPUB</text>
+  <text x="1134" y="431" text-anchor="end" font-size="23" fill="#c2d1ef">于连林 著</text>
+</svg>

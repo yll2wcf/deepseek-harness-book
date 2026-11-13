@@ -1,0 +1,14 @@
+{
+  "title": "从源码读懂 Agent",
+  "subtitle": "DeepSeek Harness 架构分析与实战",
+  "author": "于连林",
+  "edition": "开源学习版 2026.11",
+  "date": "2026-11-13",
+  "repository": "https://github.com/yll2wcf/deepseek-harness-book",
+  "source_repository": "https://github.com/deepseek-ai/deepseek-harness",
+  "source_commit": "e8f7b93a344964de3dca1ace9e72b6e4d6de87cb",
+  "source_version": "0.2.2-rc.2",
+  "historical_commit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "historical_version": "0.1.2-alpha.1",
+  "release": "v2026.11.13"
+}

@@ -1,0 +1,4 @@
+- name: '../config-demo.ts'
+  config:
+    greeting: !!js process.env.DEMO_GREETING ?? 'Hello'
+    targets: ['environment']

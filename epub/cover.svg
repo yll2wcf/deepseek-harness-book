@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2263" viewBox="0 0 1600 2263">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0c172c"/><stop offset="1" stop-color="#24346b"/></linearGradient></defs>
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif}</style>
+<rect width="1600" height="2263" fill="url(#bg)"/>
+<circle cx="1460" cy="240" r="460" fill="#6671ed" opacity=".12"/>
+<text x="126" y="170" font-size="34" fill="#a5b8ec">开源学习版 2026.11</text>
+<text x="120" y="580" font-size="112" font-weight="700" fill="white">从源码读懂</text>
+<text x="120" y="790" font-size="196" font-weight="700" fill="#8da9ff">Agent</text>
+<rect x="126" y="870" width="200" height="10" rx="5" fill="#6d9cff"/>
+<text x="124" y="1040" font-size="62" fill="#e3eaff">DeepSeek Harness</text>
+<text x="124" y="1140" font-size="62" fill="#e3eaff">架构分析与实战</text>
+<text x="126" y="1280" font-size="34" fill="#bdc9e2">从一次模型调用，到能取消、能恢复的运行系统</text>
+<rect x="126" y="1490" width="380" height="170" rx="22" fill="#294989" stroke="#7599ef" stroke-width="2"/>
+<text x="316" y="1555" text-anchor="middle" font-size="40" fill="white">Session</text>
+<text x="316" y="1614" text-anchor="middle" font-size="32" fill="#c2d1ef">事实</text>
+<rect x="586" y="1490" width="380" height="170" rx="22" fill="#294989" stroke="#7599ef" stroke-width="2"/>
+<text x="776" y="1555" text-anchor="middle" font-size="40" fill="white">Loop</text>
+<text x="776" y="1614" text-anchor="middle" font-size="32" fill="#c2d1ef">运行</text>
+<rect x="1046" y="1490" width="380" height="170" rx="22" fill="#294989" stroke="#7599ef" stroke-width="2"/>
+<text x="1236" y="1555" text-anchor="middle" font-size="40" fill="white">Tools</text>
+<text x="1236" y="1614" text-anchor="middle" font-size="32" fill="#c2d1ef">动作</text>
+<text x="126" y="1795" font-size="32" fill="#c2d1ef">14章 · 10张教学图 · 失败与恢复 · 制造业案例</text>
+<text x="126" y="1980" font-size="44" fill="white">于连林 著</text>
+<path d="M126 2060 H1474" stroke="#697da5" opacity=".5"/>
+<text x="126" y="2140" font-size="27" fill="#a9bbdf">基于上游 master e8f7b93a34 · 声明版本 0.2.2-rc.2</text>
+</svg>

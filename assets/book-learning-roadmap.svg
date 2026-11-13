@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 980" width="960" height="980">
+  <style>
+    text { font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', 'Microsoft JhengHei', 'SimHei', sans-serif; }
+    .title { font-size: 32px; font-weight: 700; fill: #111827; }
+    .subtitle { font-size: 16px; fill: #6b7280; }
+    .stage { font-size: 22px; font-weight: 700; fill: #111827; }
+    .chapter { font-size: 14px; font-weight: 600; fill: #2563eb; }
+    .detail { font-size: 16px; fill: #4b5563; }
+    .pill { font-size: 16px; font-weight: 600; fill: #111827; }
+  </style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2563eb"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#111827" flood-opacity="0.10"/></filter>
+  </defs>
+  <rect width="960" height="980" fill="#ffffff"/>
+  <text x="480" y="54" text-anchor="middle" class="title">从运行现象到自己的 Agent Harness</text>
+  <text x="480" y="86" text-anchor="middle" class="subtitle">全书不按包名展开，而是沿一项任务逐步追问责任</text>
+  <rect x="330" y="120" width="300" height="64" rx="32" fill="#111827"/>
+  <text x="480" y="160" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">一次真实用户任务</text>
+  <path d="M480 184 L480 222" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="110" y="230" width="740" height="120" rx="14" fill="#eff6ff" stroke="#93c5fd" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="160" cy="290" r="25" fill="#2563eb"/><text x="160" y="298" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">1</text>
+  <text x="205" y="272" class="stage">先看见 Agent 怎样运行</text><text x="760" y="272" text-anchor="end" class="chapter">第1—3章</text>
+  <text x="205" y="306" class="detail">启动、观察、沿一条消息建立运行地图</text><text x="205" y="334" class="detail">从“看见回答”走到“看见任务怎样流动”</text>
+  <path d="M480 350 L480 388" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="110" y="396" width="740" height="120" rx="14" fill="#f0fdf4" stroke="#86efac" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="160" cy="456" r="25" fill="#16a34a"/><text x="160" y="464" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">2</text>
+  <text x="205" y="438" class="stage">理解插件怎样组成系统</text><text x="760" y="438" text-anchor="end" class="chapter">第4—6章</text>
+  <text x="205" y="472" class="detail">Cordis、Service、Event、Profile、Bundle 与 Patch</text><text x="205" y="500" class="detail">从“记住目录”走到“找到责任所有者”</text>
+  <path d="M480 516 L480 554" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="110" y="562" width="740" height="120" rx="14" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="160" cy="622" r="25" fill="#9333ea"/><text x="160" y="630" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">3</text>
+  <text x="205" y="604" class="stage">进入一次任务的核心循环</text><text x="760" y="604" text-anchor="end" class="chapter">第7—10章</text>
+  <text x="205" y="638" class="detail">Session Event、模型请求、Turn、Step 与工具结算</text><text x="205" y="666" class="detail">从“模型调用函数”走到“系统完成工作”</text>
+  <path d="M480 682 L480 720" stroke="#2563eb" stroke-width="3" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="110" y="728" width="740" height="120" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="160" cy="788" r="25" fill="#ea580c"/><text x="160" y="796" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">4</text>
+  <text x="205" y="770" class="stage">从演示程序走向工程系统</text><text x="760" y="770" text-anchor="end" class="chapter">第11—14章</text>
+  <text x="205" y="804" class="detail">权限、取消、恢复、任务协作与制造业复刻</text><text x="205" y="832" class="detail">从“读懂设计”走到“写出最小 Harness”</text>
+  <text x="480" y="892" text-anchor="middle" font-size="17" font-weight="700" fill="#6b7280">最后用六项责任检查自己的设计</text>
+  <g>
+    <rect x="105" y="916" width="112" height="42" rx="21" fill="#dbeafe"/><text x="161" y="943" text-anchor="middle" class="pill">事实</text>
+    <rect x="233" y="916" width="112" height="42" rx="21" fill="#dcfce7"/><text x="289" y="943" text-anchor="middle" class="pill">运行</text>
+    <rect x="361" y="916" width="112" height="42" rx="21" fill="#ede9fe"/><text x="417" y="943" text-anchor="middle" class="pill">动作</text>
+    <rect x="489" y="916" width="112" height="42" rx="21" fill="#fed7aa"/><text x="545" y="943" text-anchor="middle" class="pill">权限</text>
+    <rect x="617" y="916" width="112" height="42" rx="21" fill="#fee2e2"/><text x="673" y="943" text-anchor="middle" class="pill">取消</text>
+    <rect x="745" y="916" width="112" height="42" rx="21" fill="#ccfbf1"/><text x="801" y="943" text-anchor="middle" class="pill">恢复</text>
+  </g>
+</svg>

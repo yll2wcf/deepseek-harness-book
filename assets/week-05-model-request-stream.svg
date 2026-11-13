@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" width="960" height="760">
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif} .node{font-size:19px;font-weight:600;fill:#111827}.sub{font-size:13px;fill:#475569}</style>
+<defs><marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2563eb"/></marker></defs>
+<rect width="960" height="760" fill="white"/>
+<text x="480" y="52" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">请求组装、实时响应与持久结算</text>
+<text x="480" y="90" text-anchor="middle" font-size="15" fill="#64748b">系统消息进入历史；request/header不保存旧版system字段</text>
+<text x="48" y="140" font-size="16" font-weight="600" fill="#334155">① 发起请求</text>
+<rect x="48" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="168" y="202" text-anchor="middle" class="node">提示词与模型选择</text>
+<text x="168" y="236" text-anchor="middle" class="sub">组合系统内容、路由与配置</text>
+<path d="M288 212 L352 212" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="480" y="202" text-anchor="middle" class="node">system/message</text>
+<text x="480" y="236" text-anchor="middle" class="sub">系统内容作为可重建事实</text>
+<path d="M600 212 L664 212" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="792" y="202" text-anchor="middle" class="node">GenerateOptions</text>
+<text x="792" y="236" text-anchor="middle" class="sub">模型、tools、messages等</text>
+<text x="48" y="320" font-size="16" font-weight="600" fill="#334155">② 传输与观察</text>
+<rect x="48" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="168" y="382" text-anchor="middle" class="node">LLM Adapter</text>
+<text x="168" y="416" text-anchor="middle" class="sub">提供方协议转换为共享流</text>
+<path d="M288 392 L352 392" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="480" y="382" text-anchor="middle" class="node">assistant-stream</text>
+<text x="480" y="416" text-anchor="middle" class="sub">实时发布响应帧</text>
+<path d="M600 392 L664 392" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="792" y="382" text-anchor="middle" class="node">界面与消费方</text>
+<text x="792" y="416" text-anchor="middle" class="sub">展示进度；不代替事实日志</text>
+<text x="48" y="500" font-size="16" font-weight="600" fill="#334155">③ 已开始流的结算</text>
+<rect x="48" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="168" y="562" text-anchor="middle" class="node">流式尝试收束</text>
+<text x="168" y="596" text-anchor="middle" class="sub">成功、失败、取消分别处理</text>
+<path d="M288 572 L352 572" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="480" y="562" text-anchor="middle" class="node">message / attempt</text>
+<text x="480" y="596" text-anchor="middle" class="sub">内嵌stream保存流记录</text>
+<path d="M600 572 L664 572" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="792" y="562" text-anchor="middle" class="node">提交或abandoned</text>
+<text x="792" y="596" text-anchor="middle" class="sub">写入失败不伪造持久记录</text>
+<text x="48" y="722" font-size="12" fill="#64748b">箭头：本行的概念或数据关系；逐行展开不同责任</text>
+<text x="912" y="722" text-anchor="end" font-size="12" fill="#64748b">源码基线 e8f7b93a34 · 2026-11-13</text>
+</svg>

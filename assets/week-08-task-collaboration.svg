@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" width="960" height="760">
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif} .node{font-size:19px;font-weight:600;fill:#111827}.sub{font-size:13px;fill:#475569}</style>
+<defs><marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2563eb"/></marker></defs>
+<rect width="960" height="760" fill="white"/>
+<text x="480" y="52" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">Subagent、Job与Workflow各自交付什么</text>
+<text x="480" y="90" text-anchor="middle" font-size="15" fill="#64748b">子Session与一次activation分开；取消和释放由持有方负责</text>
+<text x="48" y="140" font-size="16" font-weight="600" fill="#334155">① 独立判断</text>
+<rect x="48" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="168" y="202" text-anchor="middle" class="node">Subagent</text>
+<text x="168" y="236" text-anchor="middle" class="sub">按具名Provider委派</text>
+<path d="M288 212 L352 212" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="480" y="202" text-anchor="middle" class="node">受管理activation</text>
+<text x="480" y="236" text-anchor="middle" class="sub">本地子Session与持久Inbox</text>
+<path d="M600 212 L664 212" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="792" y="202" text-anchor="middle" class="node">result + dispose</text>
+<text x="792" y="236" text-anchor="middle" class="sub">结算结果并释放本次执行</text>
+<text x="48" y="320" font-size="16" font-weight="600" fill="#334155">② 长时间资源</text>
+<rect x="48" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="168" y="382" text-anchor="middle" class="node">Job</text>
+<text x="168" y="416" text-anchor="middle" class="sub">后台执行与资源归生产方</text>
+<path d="M288 392 L352 392" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="480" y="382" text-anchor="middle" class="node">Registry</text>
+<text x="480" y="416" text-anchor="middle" class="sub">登记身份、状态与访问</text>
+<path d="M600 392 L664 392" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="792" y="382" text-anchor="middle" class="node">wait / read / terminal</text>
+<text x="792" y="416" text-anchor="middle" class="sub">观察输出并等待资源终态</text>
+<text x="48" y="500" font-size="16" font-weight="600" fill="#334155">③ 脚本编排</text>
+<rect x="48" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="168" y="562" text-anchor="middle" class="node">Workflow</text>
+<text x="168" y="596" text-anchor="middle" class="sub">纯JavaScript编排体</text>
+<path d="M288 572 L352 572" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="480" y="562" text-anchor="middle" class="node">PTC Node Engine</text>
+<text x="480" y="596" text-anchor="middle" class="sub">Node进程调用agent等钩子</text>
+<path d="M600 572 L664 572" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="792" y="562" text-anchor="middle" class="node">JSON result</text>
+<text x="792" y="596" text-anchor="middle" class="sub">父调用等待完整运行结算</text>
+<text x="48" y="722" font-size="12" fill="#64748b">箭头：本行的概念或数据关系；逐行展开不同责任</text>
+<text x="912" y="722" text-anchor="end" font-size="12" fill="#64748b">源码基线 e8f7b93a34 · 2026-11-13</text>
+</svg>

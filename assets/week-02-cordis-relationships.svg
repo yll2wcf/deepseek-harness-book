@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-labelledby="title desc">
+  <title id="title">Cordis 六个核心概念关系图</title>
+  <desc id="desc">配置挂载插件，插件产生 Fiber 并接收 Context。Context 提供服务、事件和 Effect API；Fiber dispose 会撤销这些注册并完成资源清理。</desc>
+  <style>
+    text { font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', 'Microsoft JhengHei', SimHei, sans-serif; }
+    .title { fill: #111827; font-size: 24px; font-weight: 700; }
+    .section { fill: #6b7280; font-size: 13px; font-weight: 600; letter-spacing: 1px; }
+    .node-title { fill: #111827; font-size: 17px; font-weight: 700; }
+    .node-sub { fill: #4b5563; font-size: 13px; }
+    .label { fill: #374151; font-size: 12px; font-weight: 600; }
+    .legend { fill: #6b7280; font-size: 12px; }
+  </style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/></marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#059669"/></marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/></marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#111827" flood-opacity="0.10"/></filter>
+  </defs>
+  <rect width="1200" height="760" fill="#ffffff"/>
+  <text id="title-text" class="title" x="60" y="48">Cordis：插件不是一段孤立代码，而是一组受生命周期管理的注册</text>
+  <text class="section" x="60" y="88">组合与运行</text>
+  <text class="section" x="60" y="458">插件通过 Context 贡献能力</text>
+  <g filter="url(#shadow)">
+    <rect x="60" y="110" width="230" height="105" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text class="node-title" x="175" y="146" text-anchor="middle">cordis.yml / ctx.plugin()</text>
+    <text class="node-sub" x="175" y="174" text-anchor="middle">选择并挂载插件</text>
+    <text class="node-sub" x="175" y="194" text-anchor="middle">列表位置不决定加载顺序</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="365" y="110" width="230" height="105" rx="10" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+    <text class="node-title" x="480" y="146" text-anchor="middle">Plugin</text>
+    <text class="node-sub" x="480" y="174" text-anchor="middle">apply(ctx) 描述贡献</text>
+    <text class="node-sub" x="480" y="194" text-anchor="middle">函数、对象或 Service 子类</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="670" y="110" width="230" height="105" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <text class="node-title" x="785" y="146" text-anchor="middle">Fiber</text>
+    <text class="node-sub" x="785" y="174" text-anchor="middle">一次插件挂载的运行实例</text>
+    <text class="node-sub" x="785" y="194" text-anchor="middle">跟踪配置、状态与清理</text>
+  </g>
+  <g>
+    <rect x="965" y="110" width="175" height="105" rx="10" fill="#f9fafb" stroke="#d1d5db" stroke-width="1.5"/>
+    <text class="node-title" x="1052" y="140" text-anchor="middle">六种状态</text>
+    <text class="node-sub" x="1052" y="164" text-anchor="middle">PENDING · LOADING</text>
+    <text class="node-sub" x="1052" y="184" text-anchor="middle">ACTIVE · FAILED</text>
+    <text class="node-sub" x="1052" y="204" text-anchor="middle">UNLOADING · DISPOSED</text>
+  </g>
+  <path d="M 290 162 L 365 162" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="307" y="146" width="42" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="328" y="160" text-anchor="middle">挂载</text>
+  <path d="M 595 162 L 670 162" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="610" y="146" width="46" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="633" y="160" text-anchor="middle">生成</text>
+  <path d="M 900 162 L 965 162" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="914" y="146" width="38" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="933" y="160" text-anchor="middle">进入</text>
+  <g filter="url(#shadow)">
+    <rect x="420" y="285" width="310" height="125" rx="12" fill="#f0fdfa" stroke="#99f6e4" stroke-width="2"/>
+    <text class="node-title" x="575" y="326" text-anchor="middle">Context（ctx）</text>
+    <text class="node-sub" x="575" y="354" text-anchor="middle">共享服务容器、事件总线和生命周期 API</text>
+    <text class="node-sub" x="575" y="378" text-anchor="middle">子 Context 扩展作用域，不修改父 Context</text>
+  </g>
+  <g>
+    <rect x="820" y="285" width="320" height="125" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+    <text class="node-title" x="980" y="321" text-anchor="middle">fiber.dispose()</text>
+    <text class="node-sub" x="980" y="349" text-anchor="middle">先等依赖方卸载，再撤销自身注册</text>
+    <text class="node-sub" x="980" y="373" text-anchor="middle">逆序启动 disposer，并等待异步清理</text>
+    <text class="node-sub" x="980" y="397" text-anchor="middle">所需 Service 消失时，消费方也会卸载</text>
+  </g>
+  <path d="M 480 215 L 480 250 L 520 250 L 520 285" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="448" y="232" width="64" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="480" y="246" text-anchor="middle">apply(ctx)</text>
+  <path d="M 785 215 L 785 245 L 655 245 L 655 285" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+  <rect x="700" y="229" width="42" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="721" y="243" text-anchor="middle">持有</text>
+  <path d="M 835 215 L 835 250 L 895 250 L 895 285" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6,4" fill="none" marker-end="url(#arrow-purple)"/>
+  <rect x="836" y="232" width="76" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="874" y="246" text-anchor="middle">卸载触发</text>
+  <g>
+    <rect x="75" y="500" width="290" height="135" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <text class="node-title" x="220" y="538" text-anchor="middle">Service</text>
+    <text class="node-sub" x="220" y="565" text-anchor="middle">provide() / Service 子类公开具名能力</text>
+    <text class="node-sub" x="220" y="589" text-anchor="middle">消费插件用 inject 声明硬依赖</text>
+    <text class="node-sub" x="220" y="613" text-anchor="middle">缺失时保持 PENDING，不按配置顺序猜测</text>
+  </g>
+  <g>
+    <rect x="455" y="500" width="290" height="135" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+    <text class="node-title" x="600" y="538" text-anchor="middle">Event</text>
+    <text class="node-sub" x="600" y="565" text-anchor="middle">on() 注册，emit / waterfall 等分发</text>
+    <text class="node-sub" x="600" y="589" text-anchor="middle">观察者无需知道发送方和其他监听器</text>
+    <text class="node-sub" x="600" y="613" text-anchor="middle">Waterfall 不调用 next() 就会短路</text>
+  </g>
+  <g>
+    <rect x="835" y="500" width="290" height="135" rx="10" fill="#faf5ff" stroke="#ddd6fe" stroke-width="1.5"/>
+    <text class="node-title" x="980" y="538" text-anchor="middle">Effect</text>
+    <text class="node-sub" x="980" y="565" text-anchor="middle">effect() 立即获取资源并返回 disposer</text>
+    <text class="node-sub" x="980" y="589" text-anchor="middle">ctx.on()、ctx.plugin() 和服务注册本身也是 Effect</text>
+    <text class="node-sub" x="980" y="613" text-anchor="middle">生命周期结束时自动回卷</text>
+  </g>
+  <path d="M 500 410 L 500 455 L 220 455 L 220 500" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  <rect x="328" y="439" width="84" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="370" y="453" text-anchor="middle">提供与读取</text>
+  <path d="M 575 410 L 575 470 L 600 470 L 600 500" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  <rect x="549" y="447" width="76" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="587" y="461" text-anchor="middle">监听与分发</text>
+  <path d="M 650 410 L 650 455 L 980 455 L 980 500" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+  <rect x="778" y="439" width="84" height="20" rx="4" fill="#ffffff" opacity="0.95"/>
+  <text class="label" x="820" y="453" text-anchor="middle">注册与归属</text>
+  <g transform="translate(60 700)">
+    <path d="M 0 8 L 34 8" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrow-blue)"/>
+    <text class="legend" x="44" y="12">挂载与运行关系</text>
+    <path d="M 190 8 L 224 8" stroke="#059669" stroke-width="2" fill="none" marker-end="url(#arrow-green)"/>
+    <text class="legend" x="234" y="12">Context API 贡献</text>
+    <path d="M 410 8 L 444 8" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6,4" fill="none" marker-end="url(#arrow-purple)"/>
+    <text class="legend" x="454" y="12">生命周期清理</text>
+    <text class="legend" x="760" y="12">基线：e8f7b93a34 · 2026-11-13</text>
+  </g>
+</svg>

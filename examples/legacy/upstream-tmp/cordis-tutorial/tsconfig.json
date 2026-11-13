@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "incremental": false,
+    "noEmit": true,
+    "sourceMap": false,
+    "paths": {
+      "@deepseek-ai/cordis": ["../../vendor/cordis/lib/types/index.d.ts"],
+      "@deepseek-ai/schemastery": ["../../vendor/schemastery/lib/types/index.d.ts"],
+      "@deepseek-ai/dsh-tools": ["../../packages/core/tools/lib/types/index.d.ts"],
+      "@deepseek-ai/dsh-llm": ["../../packages/llm/llm/lib/types/index.d.ts"]
+    }
+  },
+  "include": ["**/*.ts"]
+}

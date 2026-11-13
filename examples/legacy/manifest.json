@@ -1,0 +1,145 @@
+{
+  "source_commit": "cd5ef8148158c3a752a658978873241fdf8e2bbc",
+  "files": [
+    {
+      "path": "agent-continuity-tutorial/continuity-demo.mjs",
+      "sha256": "b70834f45e4703e59e1c4d735b4817c6ae473eab8c749a4798114e7efb0661f0"
+    },
+    {
+      "path": "agent-continuity-tutorial/manufacturing-agent-demo.mjs",
+      "sha256": "c0f5009ac41e9a37f22a9f20c4499447bc754329efc3cee199be0fc259790777"
+    },
+    {
+      "path": "agent-loop-tutorial/agent-loop-demo.mjs",
+      "sha256": "f29039b0cbc6f445b9b4e9bb43a44de5d9216592956781d02f147ff01cae17e6"
+    },
+    {
+      "path": "cordis-tutorial/01-first-plugin/cordis.yml",
+      "sha256": "83bd0526aff259bbef4b171b34d5c5934db765badeb2f4cec0ef56fd6686289b"
+    },
+    {
+      "path": "cordis-tutorial/01-first-plugin/hello.ts",
+      "sha256": "827b779c45fa2ff93b4f0d5724d9e5e379cc5ce42ff1e1cb5d1b3bde0e621855"
+    },
+    {
+      "path": "cordis-tutorial/02-lifecycle/cordis.yml",
+      "sha256": "74dc470d41db0b303c5348a98e24bba6bb142e7219f65b8fb582573668635b35"
+    },
+    {
+      "path": "cordis-tutorial/02-lifecycle/lifecycle.ts",
+      "sha256": "8a7964c7e31b1a582e0c44086d328723ddd5deb8af7ad972fd007fb0462f6b88"
+    },
+    {
+      "path": "cordis-tutorial/03-services/consumer.ts",
+      "sha256": "d0c2a6b8125a222dd10c07e24187fa1a37ba309fa5f6342539c28d1338b37c74"
+    },
+    {
+      "path": "cordis-tutorial/03-services/greeter.ts",
+      "sha256": "b6e4a36fd7f6c25219eddd3794863b0c33d788bf519cec07f32e62556f08894f"
+    },
+    {
+      "path": "cordis-tutorial/03-services/missing/cordis.yml",
+      "sha256": "aefb699d2a0b4ecc1ff6efce75242f38b2c8f8fbd757aa943f0c50558497445b"
+    },
+    {
+      "path": "cordis-tutorial/03-services/ready/cordis.yml",
+      "sha256": "1cfbc67f304bcfc471b5b86f329e0d4e112df460684f6495d3b7dfa43b44d4db"
+    },
+    {
+      "path": "cordis-tutorial/04-events/broken-waterfall/cordis.yml",
+      "sha256": "61eb424c5cfca251a2906d9ce20c576333c989ce1e72857c9c80347b1fd7dc57"
+    },
+    {
+      "path": "cordis-tutorial/04-events/emit/cordis.yml",
+      "sha256": "9d8fe2d88fbdec1161a0c2eeb0833f36146fcb161fb640533c72b291ba7f1e3c"
+    },
+    {
+      "path": "cordis-tutorial/04-events/reporter.ts",
+      "sha256": "5a7b8d410d96ab5b276df8fe8d53e6a2b340a198a58cd9213dcee614af9ca2a2"
+    },
+    {
+      "path": "cordis-tutorial/04-events/stats.ts",
+      "sha256": "b2f2e873bee4d8c699d0f8198896965c552503664182f30f87c4cea211ca5201"
+    },
+    {
+      "path": "cordis-tutorial/04-events/waterfall/cordis.yml",
+      "sha256": "06284d7b3c7e6c3cc9b03a33055599d6a05f563e782a2a2ee705f54c6bb6d604"
+    },
+    {
+      "path": "cordis-tutorial/04-events/waterfall-demo.ts",
+      "sha256": "580d0dc842037f80c04f5668508d934b9a676146d702cf3a3bfb0e8c54ff50dc"
+    },
+    {
+      "path": "cordis-tutorial/04-events/waterfall-missing-next.ts",
+      "sha256": "c0f0fba8ef87c74180b73f6ea85cd08a6bb8cf7db8544b10db3edbfd15bf50e3"
+    },
+    {
+      "path": "cordis-tutorial/05-config/config-demo.ts",
+      "sha256": "bb67fbdafeeee00a5d440062d4b8fa2ac53b8326d57d5a5c255c215f31eab4ee"
+    },
+    {
+      "path": "cordis-tutorial/05-config/environment/cordis.yml",
+      "sha256": "5c0e0da5ec08e6cfc55896f6df1bab5702659d5050988547e85125d93be2d469"
+    },
+    {
+      "path": "cordis-tutorial/05-config/invalid/cordis.yml",
+      "sha256": "9d076f7ea622b2ad9aad5591cc67942b19b5674aae0b398fbc887d9529962190"
+    },
+    {
+      "path": "cordis-tutorial/05-config/valid/cordis.yml",
+      "sha256": "f4d399f0375448b10e2a041085802f461e7b2afeb201c96362be9a4d0d40822c"
+    },
+    {
+      "path": "cordis-tutorial/06-composition/diagnose.ts",
+      "sha256": "e907ec031564dca455baf255f73c8fb9f7682a9b779b3e86008cc2d465110c21"
+    },
+    {
+      "path": "cordis-tutorial/06-composition/hmr/cordis.yml",
+      "sha256": "f6677535066522b1b85221d95fdf405e3ebd04305a64863d6512d9a46078be4d"
+    },
+    {
+      "path": "cordis-tutorial/06-composition/hmr/hmr-demo.ts",
+      "sha256": "9000f4b85b9c1e45dd5ce3d217f9774eed0e698faa461321376da71cf6ab8870"
+    },
+    {
+      "path": "cordis-tutorial/06-composition/needs-timer.ts",
+      "sha256": "2c9ae86c8cd3563dc42eaa204ae18166a4f975f2d998b9e2624b1402f27408b2"
+    },
+    {
+      "path": "cordis-tutorial/06-composition/pending/cordis.yml",
+      "sha256": "36d84ee8e7b361f5d9fbf3ee08a78dbccc9429a8f7c54d9e7722fbaa533f7203"
+    },
+    {
+      "path": "cordis-tutorial/06-composition/resolved/cordis.yml",
+      "sha256": "9158e772caed0c7ac07718c6a67e67203011d05787e9954a2b3556d32cda55b5"
+    },
+    {
+      "path": "cordis-tutorial/07-harness-tool/cordis.yml",
+      "sha256": "077c31a81d7a6aa73d7d956bb4e7cba4f0d1cc182c681d483f24c0891f23a26d"
+    },
+    {
+      "path": "cordis-tutorial/07-harness-tool/greet-tool.ts",
+      "sha256": "e29771c018c07f55896f7cf3fc4aceecad55ceda15ddf770656839538d19a2ae"
+    },
+    {
+      "path": "cordis-tutorial/07-harness-tool/tool-logger.ts",
+      "sha256": "d8e60a25bbe4a720d9a601ffb4351304540b200b987680a9de610a27dbdafe74"
+    },
+    {
+      "path": "cordis-tutorial/tsconfig.json",
+      "sha256": "f06044e8a1e115ab25395c9bc41551b36208d5f30a9f201f1a8049f763894b51"
+    },
+    {
+      "path": "llm-request-tutorial/llm-request-demo.mjs",
+      "sha256": "4b21194408ebd6cc29c296fa240855471009fe1b21e3008389363c89c926758d"
+    },
+    {
+      "path": "session-event-tutorial/session-event-demo.mjs",
+      "sha256": "7d4d3fee7ba13f8ba5a8dcff7a41f2a07ba58b9947fc1868a51d7fc8daf19104"
+    },
+    {
+      "path": "tool-pipeline-tutorial/tool-pipeline-demo.mjs",
+      "sha256": "81ffa7e283ee159098e02798c6dce8bdb0577f653a7496510242ed430216f7d0"
+    }
+  ]
+}

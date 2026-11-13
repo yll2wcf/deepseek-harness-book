@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" width="960" height="760">
+<style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif} .node{font-size:19px;font-weight:600;fill:#111827}.sub{font-size:13px;fill:#475569}</style>
+<defs><marker id="arrow-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#2563eb"/></marker></defs>
+<rect width="960" height="760" fill="white"/>
+<text x="480" y="52" text-anchor="middle" font-size="28" font-weight="700" fill="#111827">工具执行由ToolsService选择Executor</text>
+<text x="480" y="90" text-anchor="middle" font-size="15" fill="#64748b">工具call/result的持久化属于执行器；Agent Loop消费批次结果</text>
+<text x="48" y="140" font-size="16" font-weight="600" fill="#334155">① 工具选择</text>
+<rect x="48" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="168" y="202" text-anchor="middle" class="node">ToolsService</text>
+<text x="168" y="236" text-anchor="middle" class="sub">注册、作用域与可见工具</text>
+<path d="M288 212 L352 212" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="480" y="202" text-anchor="middle" class="node">ToolExecutor</text>
+<text x="480" y="236" text-anchor="middle" class="sub">作用域选择执行器</text>
+<path d="M600 212 L664 212" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="160" width="240" height="104" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<text x="792" y="202" text-anchor="middle" class="node">Native / PTC</text>
+<text x="792" y="236" text-anchor="middle" class="sub">不同调用方式共享核心规则</text>
+<text x="48" y="320" font-size="16" font-weight="600" fill="#334155">② 调用准入</text>
+<rect x="48" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="168" y="382" text-anchor="middle" class="node">Session tool/call</text>
+<text x="168" y="416" text-anchor="middle" class="sub">主体执行前记录调用事实</text>
+<path d="M288 392 L352 392" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="480" y="382" text-anchor="middle" class="node">参数快照与pre</text>
+<text x="480" y="416" text-anchor="middle" class="sub">不可变参数交给策略判断</text>
+<path d="M600 392 L664 392" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="340" width="240" height="104" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+<text x="792" y="382" text-anchor="middle" class="node">Approval + guards</text>
+<text x="792" y="416" text-anchor="middle" class="sub">审批以后仍可被守卫拒绝</text>
+<text x="48" y="500" font-size="16" font-weight="600" fill="#334155">③ 执行与结算</text>
+<rect x="48" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="168" y="562" text-anchor="middle" class="node">Schema + 主体</text>
+<text x="168" y="596" text-anchor="middle" class="sub">定义入口校验后执行Provider</text>
+<path d="M288 572 L352 572" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="360" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="480" y="562" text-anchor="middle" class="node">结果投影与后处理</text>
+<text x="480" y="596" text-anchor="middle" class="sub">projectContent / post / finalize</text>
+<path d="M600 572 L664 572" stroke="#2563eb" stroke-width="2.5" fill="none" marker-end="url(#arrow-blue)"/>
+<rect x="672" y="520" width="240" height="104" rx="12" fill="#faf5ff" stroke="#d8b4fe" stroke-width="2"/>
+<text x="792" y="562" text-anchor="middle" class="node">Session tool/result</text>
+<text x="792" y="596" text-anchor="middle" class="sub">有序提交并进入模型历史</text>
+<text x="48" y="722" font-size="12" fill="#64748b">箭头：本行的概念或数据关系；逐行展开不同责任</text>
+<text x="912" y="722" text-anchor="end" font-size="12" fill="#64748b">源码基线 e8f7b93a34 · 2026-11-13</text>
+</svg>
